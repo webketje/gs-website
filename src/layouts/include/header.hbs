@@ -1,0 +1,15 @@
+<header class="site__header">
+  <div class="wrapper">
+    <a href="/">
+      <h2 class="site__title">{{ meta.sitename }}</h2>
+    </a>
+    <nav class="site__nav nav" id="navigation">
+      <a href="#navigation" class="nav__icon" title="Open menu">&#9776;</a>
+      <a href="#" class="nav__close" title="Close menu">&times;</a>
+      {{#each meta.nav}}<a href="{{ url }}" class="nav__link{{# if (eq id ../page.id) }} nav__link--active{{/if}}">
+        {{ title }}
+      </a>{{/each}}
+    </nav>
+    {{> include/facebook-like }}
+  </div>
+</header>
