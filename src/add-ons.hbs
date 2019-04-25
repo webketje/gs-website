@@ -6,7 +6,7 @@ title: Add-ons
 {{#> default }}
   {{#*inline 'head'}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.2/handlebars.min.js"></script>
-    <script src="/assets/langs.js"></script>
+    <script src="{{meta.siteurl}}/assets/langs.js"></script>
   {{/inline}}
 
   {{#*inline 'main'}}
@@ -14,6 +14,6 @@ title: Add-ons
   {{/inline}}
 
   {{#*inline 'footer'}}
-    <script src="/assets/extend.min.js"></script>
+    <script src="{{meta.siteurl}}/assets/extend.min.js"></script>
   {{/inline}}
 {{/default}}

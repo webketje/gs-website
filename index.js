@@ -16,6 +16,7 @@ var openGraph = {
 }
 
 var site = Metalsmith(__dirname);
+var isDev = process.env.NODE_ENV === 'dev'
 
 site
   .source("./src")
@@ -24,7 +25,7 @@ site
   .metadata({
     author: "Chris Cagle",
     sitename: "GetSimple CMS",
-    siteurl: "https://webketje.com",
+    siteurl: isDev ? '' : 'https://webketje.com/gs-website',
     description: "GetSimple is an open source Simple CMS that utilizes the speed and convenience of flat file XML, a best-in-class UI and the easiest learning curve of any lite Content Management System out there. It requires no database and has a powerful plugin system that allows for unlimited expansion.",
     keywords: "simple management, getsimple, content management system, cms, simple, no database,flat file,xml",
     generatorname: "Metalsmith",

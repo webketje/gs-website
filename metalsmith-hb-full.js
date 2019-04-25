@@ -54,7 +54,6 @@ module.exports = function(options) {
         ] = current
         delete files[p];
       });
-      console.log(metalsmith.metadata())
     done();
   };
 }

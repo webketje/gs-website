@@ -37,8 +37,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node index.js",
-    "serve": "node index.js serve",
+    "build": "NODE_ENV=prod node index.js",
+    "serve": "NODE_ENV=dev node index.js",
     "publish": "npm run build && gh-pages -t -d dist -b gh-pages"
   },
   "author": "Kevin Van Lierde",
