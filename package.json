@@ -39,7 +39,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node index.js",
     "serve": "node index.js serve",
-    "publish": "npm run build && gh-pages -t -d dist -b master"
+    "publish": "npm run build && gh-pages -t -d dist -b gh-pages"
   },
   "author": "Kevin Van Lierde",
   "license": "GPL"
