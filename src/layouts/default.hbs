@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{> include/head }}
+  </head>
+  <body>
+    {{> include/header }}
+    <main>
+      <div class="wrapper">
+        {{#>main}}
+        {{/main}}
+        <div class="content">
+          {{>@partial-block}}
+        </div>
+      </div>
+    </main>
+    {{> include/footer }}
+  </html>

@@ -1,0 +1,23 @@
+---
+id: home
+title: The Simplest Content Management System. Ever. 
+tagline: GetSimple has everything you need, and nothing you don't
+---
+{{#> default }}
+  {{#*inline 'main'}}
+    <h1 style="text-align: center;">{{page.title}}</h1>
+    <h5>{{page.tagline}}</h5>
+
+    <div class="feature-list">
+    {{#each data.content.features}}
+      <div class="feature-list__item">
+        <div class="feature">
+          <h3>{{ title }}</h3>
+          <img src="/assets/img/{{icon}}.png" alt="{{icon}}">
+          <p>{{{ text }}}</p>
+        </div>
+      </div>
+    {{/each}}
+    </div>
+  {{/inline}}
+{{/default}}

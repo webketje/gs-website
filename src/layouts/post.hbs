@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{> include/head this }}
+  </head>
+  <body>
+    <article>
+      {{> @partial-block}}
+    </article>
+    <footer>
+      {{#>footer}}
+      default
+      {{/footer}}
+    </footer>
+  </body>
+</html>
