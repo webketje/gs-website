@@ -2,6 +2,8 @@
   "name": "gs-future-site",
   "version": "1.0.1",
   "main": "index.js",
+  "description": "A test for the future GS website",
+  "repository": "https://github.com/webketje/gs-website.git",
   "devDependencies": {
     "gh-pages": "^2.0.1",
     "handlebars": "^4.1.2",
