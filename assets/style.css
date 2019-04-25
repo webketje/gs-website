@@ -1,0 +1,279 @@
+:root {
+  --breakpoint-small: 480px;
+  --breakpoint-medium: 768px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #333;
+}
+
+body {
+  padding-bottom: 50px;
+}
+
+main {
+  color: #333;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: Arial Narrow;
+  margin: 0;
+}
+h1:first-letter,
+h2:first-letter,
+h3:first-letter,
+h4:first-letter,
+h5:first-letter,
+h6:first-letter {
+  text-transform: capitalize;
+}
+
+h1 em,
+h2 em,
+h3 em,
+h4 em,
+h5 em {
+  color: #cf3805;
+  font-style: normal;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4 {
+  text-transform: none;
+}
+
+.content h3 {
+  color: #CF3805;
+}
+
+.wrapper {
+  max-width: 100%;
+  width: 1024px;
+  padding: 1rem;
+  margin: 0px auto;
+  position: relative;
+}
+
+button {
+  background-color: #cf3805;
+}
+.site__header {
+  background-color: #1a222a;
+}
+.site__header a {
+  text-decoration: none;
+}
+.site__title {
+  font-size: 3rem;
+  display: inline-block;
+  white-space: nowrap;
+}
+.site__footer {
+  background: #eee;
+  color: #666;
+  height: 50px;
+  margin-top: 45px;
+  margin-bottom: -50px;
+}
+
+h2 {
+  font-family: Arial Narrow;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: white;
+}
+
+.nav__link {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.nav__link:hover,
+.nav__link--active {
+  color: #fff;
+}
+
+.nav__icon {
+  display: none;
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -2%;
+}
+.feature-list__item {
+  width: 25%;
+  padding: 2%;
+}
+.feature {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  text-align: center;
+  padding: 1rem;
+  height: 100%;
+  background: white;
+}
+.feature h3 {
+  height: 3.4rem;
+  text-transform: uppercase;
+}
+
+.fb-like {
+  position: absolute;
+  right: 1rem;
+  bottom: calc(100% + 1rem);
+}
+
+@media screen and (max-width: 1024px) {
+  .feature-list__item {
+    width: 33%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .site__nav {
+    margin: 1rem -.5rem -1rem;
+    overflow: hidden;
+  }
+  .site__nav .nav__link {
+    padding: .5rem .5rem .3rem .5rem;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border: 1px solid transparent;
+    margin-right: -1px;
+  }
+  .site__nav .nav__link--active {
+    background: white;
+    color: #333;
+  }
+  .site__nav .nav__link:hover,
+  .site__nav .nav__link:active,
+  .site__nav .nav__link:focus {
+    box-shadow: 0px 0px 3px #151c24;
+    margin: 0;
+    margin-right: -1px;
+    border-color: #293540;
+  }
+  .nav__close {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+
+
+.site__title {
+  font-size: 2.5rem;
+}
+
+  .fb-like { display: none; }
+
+  .site__header h2 {
+    padding-right: 2rem;
+  }
+  .nav__link {
+    opacity: 0;
+    transition: 0.2s opacity;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: .5em 0;
+  }
+  .nav__link:last-child {
+    border-bottom: none;
+  }
+  .site__nav {
+    overflow: hidden;
+    position: absolute;
+    transition: 3s height;
+    height: 2.5rem;
+    width: 2rem;
+    right: 1rem;
+    bottom: 1rem;
+  }
+  .site__nav:target {
+    position: relative;
+    overflow: visible;
+    height: auto;
+    width: auto;
+    padding: 0;
+    padding-top: 5rem;
+    border-radius: 3px;
+    margin: 0;
+    margin-top: -4rem;
+    right: 0;
+    bottom: 0;
+  }
+  .nav__icon {
+    display: block;
+  }
+  .nav__close {
+    right: 0;
+    top: 1.5rem;
+    position: absolute;
+    text-decoration: none;
+    color: #ccc;
+    font-size: 32px;
+    line-height: 32px;
+    display: none;
+  }
+  .site__nav:target .nav__icon {
+    display: none;
+  }
+  .site__nav:target .nav__link {
+    opacity: 1;
+  }
+  .site__nav:target .nav__close {
+    display: block;
+  }
+
+  .feature-list__item {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .feature-list {
+    display: block;
+  }
+  .feature-list__item {
+    width: 100%;
+    margin-top: 16px;
+  }
+}
+
+@import 'extend.css';
